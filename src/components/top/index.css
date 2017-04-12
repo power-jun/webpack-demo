@@ -1,0 +1,34 @@
+.header {
+  height: 41px;
+  line-height: 41px;
+  background: #353535;
+  position: relative;
+  font-family: Arial, "simsun"
+}
+
+.logo-wrap {
+  float: left;
+  padding-left: 10px;
+}
+
+.logo-wrap .logo {
+  display: inline-block;
+  width: 68px;
+  height: 28px;
+  vertical-align: middle;
+  background: url("./images/index-sprite.png") 0 0 no-repeat;
+}
+
+.logo-wrap .logo-name {
+  margin-left: 8px;
+  color: #fff;
+}
+
+.logo-wrap .logo-vertical {
+  margin: 0 11px;
+  color: #999;
+}
+
+.logo-wrap .logo-txt {
+  color: #b8b8b8;
+}

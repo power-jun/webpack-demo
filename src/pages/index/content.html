@@ -1,0 +1,27 @@
+<h1>首页</h1>
+
+<script>
+	module.exports =  {
+		listen: {
+			init: function() {
+				console.log('init')
+			},
+
+			update: function() {
+				console.log('update')
+			},
+
+			mount: function() {
+				console.log('mount');
+				this.parent.$('#loadingCont').removeClass('loading-style').empty()
+			},
+
+			updated: function() {
+				console.log('updated')
+			},
+			unmount: function() {
+					console.log('unmount');
+			}
+		}
+	}
+</script>
