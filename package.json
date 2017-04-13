@@ -22,7 +22,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "webpack-dev-server --hot --host 0.0.0.0 --port 3000"
+    "start": "webpack-dev-server --hot"
   },
   "author": "",
   "license": "ISC"

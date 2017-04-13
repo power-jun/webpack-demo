@@ -64,7 +64,7 @@ module.exports = {
     }),
 
     new ExtractTextPlugin({
-      filename: 'css/[name].css'      
+      filename: 'css/[name].css'
     })
 
   ],
@@ -106,5 +106,24 @@ module.exports = {
 
   resolve: {
     modules: ['node_modules', 'src', 'src/pages', 'src/assets']
+  },
+
+  devServer: {
+    port: 8000,
+    hot: true,
+    compress: true,
+    host: '0.0.0.0',
+    historyApiFallback: false,
+    inline: true,
+    publicPath: '/webpack-demo/',
+    headers: { 'X-My-Header': '^_^' }, //自定义返回头
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+        pathRewrite: {
+          "^/api": ""
+        }
+      }
+    }
   }
 }

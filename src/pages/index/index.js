@@ -12,12 +12,13 @@ coala.mount({
     mount: function () {
       this.$('#loadingCont').html(loading());
       var _this = this;
-      setTimeout(function() {
+      
+      setTimeout(function () {
         require.ensure([], function () {
-        var component = coala.component(require('./content.html'));
-        component.parent = _this;
-        component.mount('.content');
-      });
+          var component = coala.component(require('./content.html'));
+          component.parent = _this;
+          component.mount('.content');
+        });
       }, 2000);
     }
   }
