@@ -23,6 +23,10 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.DllReferencePlugin({ //预编译第三方库 
+      context: '.',
+      manifest: require('./build/budle.manifest.json')
+    }),
     commonsPlugin,
     new webpack.ProvidePlugin({
       $: 'jquery',

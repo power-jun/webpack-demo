@@ -1,0 +1,13 @@
+{
+  "name": "bundle_library",
+  "content": {
+    "./node_modules/coala/coala.min.js": {
+      "id": 0,
+      "meta": {}
+    },
+    "./node_modules/jquery/dist/jquery.js": {
+      "id": 1,
+      "meta": {}
+    }
+  }
+}
