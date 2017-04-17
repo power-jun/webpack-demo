@@ -32,6 +32,6 @@
     "build": "npm run clear && NODE_ENV=production webpack --optimize-minimize --progress --profile && zip -r dist.zip dist/",
     "deploy": "npm run clear && NODE_ENV=production webpack --config webpack.deploy.js --optimize-minimize --progress --profile"
   },
-  "author": "",
+  "author": "power",
   "license": "ISC"
 }
