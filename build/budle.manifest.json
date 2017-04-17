@@ -1,5 +1,5 @@
 {
-  "name": "bundle_library",
+  "name": "bundle",
   "content": {
     "./node_modules/coala/coala.min.js": {
       "id": 0,

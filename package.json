@@ -13,6 +13,7 @@
     "expose-loader": "^0.7.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "happypack": "^3.0.3",
     "html-webpack-plugin": "^2.28.0",
     "jquery": "^3.2.1",
     "style-loader": "^0.16.1",
@@ -23,7 +24,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "webpack-dev-server --hot"
+    "start": "rm -rf .happypack & webpack-dev-server --hot"
   },
   "author": "",
   "license": "ISC"
