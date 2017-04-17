@@ -18,6 +18,7 @@
     "happypack": "^3.0.3",
     "html-webpack-plugin": "^2.28.0",
     "jquery": "^3.2.1",
+    "ssh-webpack-plugin": "^0.1.7",
     "style-loader": "^0.16.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.3.3",
@@ -28,7 +29,8 @@
   "scripts": {
     "clear": "rm -rf .happypack dist",
     "start": "npm run clear && NODE_ENV=development webpack-dev-server --hot",
-    "build": "npm run clear && NODE_ENV=production webpack --optimize-minimize --progress --profile && zip -r dist.zip dist/"
+    "build": "npm run clear && NODE_ENV=production webpack --optimize-minimize --progress --profile && zip -r dist.zip dist/",
+    "deploy": "npm run clear && NODE_ENV=production webpack --config webpack.deploy.js --optimize-minimize --progress --profile"
   },
   "author": "",
   "license": "ISC"
