@@ -8,6 +8,7 @@ const commonsPlugin = new webpack.optimize.CommonsChunkPlugin({
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const Happypack = require('happypack');
 
@@ -82,6 +83,10 @@ module.exports = {
         collapseWhitespace: true
       }
     }),
+
+    // 手工复制指定文件到目标目录
+    new CopyWebpackPlugin([{from: './build/bundle.js', to: path.join(__dirname, './assets/js')}]),
+
 
     createHappyPlugin('html', ['coala-dot-loader']),
     createHappyPlugin('css', ['css-loader?minimize']),
