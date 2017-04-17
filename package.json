@@ -14,6 +14,7 @@
     "expose-loader": "^0.7.3",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
+    "glob": "^7.1.1",
     "happypack": "^3.0.3",
     "html-webpack-plugin": "^2.28.0",
     "jquery": "^3.2.1",
@@ -25,7 +26,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "rm -rf .happypack & webpack-dev-server --hot"
+    "clear": "rm -rf .happypack dist",
+    "start": "npm run clear && NODE_ENV=development webpack-dev-server --hot",
+    "build": "npm run clear && NODE_ENV=production webpack --optimize-minimize --progress --profile"
   },
   "author": "",
   "license": "ISC"
