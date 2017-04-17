@@ -28,7 +28,7 @@
   "scripts": {
     "clear": "rm -rf .happypack dist",
     "start": "npm run clear && NODE_ENV=development webpack-dev-server --hot",
-    "build": "npm run clear && NODE_ENV=production webpack --optimize-minimize --progress --profile"
+    "build": "npm run clear && NODE_ENV=production webpack --optimize-minimize --progress --profile && zip -r dist.zip dist/"
   },
   "author": "",
   "license": "ISC"
